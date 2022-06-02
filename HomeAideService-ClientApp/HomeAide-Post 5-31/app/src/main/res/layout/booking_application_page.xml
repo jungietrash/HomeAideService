@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Input Details"
+                    android:gravity="center"
+                    android:fontFamily="@font/simple_beauty"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/black"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Please ensure data are correct"
+                    android:fontFamily="@font/simple_beauty"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Type of Property:"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <RadioButton
+                        android:id="@+id/radio_condo"
+                        android:fontFamily="@font/simple_beauty"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/condo"
+                        android:text="Condo Unit"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                         />
+
+                    <RadioButton
+                        android:id="@+id/radio_apartment"
+                        android:fontFamily="@font/simple_beauty"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/apartment"
+                        android:text="Apartment"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radio_house"
+                        android:layout_width="@dimen/_80sdp"
+                        android:fontFamily="@font/simple_beauty"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/house"
+                        android:gravity="center"
+                        android:text="House"
+
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/simple_beauty"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/roundandround"
+                    android:drawableLeft="@drawable/ic_baseline_location"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Search Address"
+                    android:padding="12dp"
+                    android:textColorHint="@color/black" />
+
+
+
+
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout4"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_booking"
+                    android:layout_margin="16dp"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:drawableTint="@color/black"
+                    android:background="@drawable/roundandround"
+                    android:hint="Type of Service">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_unit_type"
+                        android:layout_width="match_parent"
+                        app:hintTextColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:drawableTint="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="@font/simple_beauty"
+                        android:drawableLeft="@drawable/booking"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout7"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="16dp"
+                    android:textColorHint="@color/black"
+                    android:hint="Enter Phone"
+                    app:counterEnabled="true"
+                    app:hintTextColor="@color/black"
+                    android:textColor="@color/black"
+                    app:prefixTextColor="@color/black"
+                    app:counterMaxLength="10"
+                    android:drawableTint="@color/black"
+                    app:prefixText="+63">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phoneNum"
+                        android:layout_width="match_parent"
+                        android:textColorHint="@color/black"
+                        android:drawableTint="@color/black"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/simple_beauty"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:inputType="number"
+                        android:drawableLeft="@drawable/phone"
+                        android:textColor="@color/black"
+                        android:background="@drawable/roundandround"
+                        android:maxLength="10"
+                        android:paddingLeft="8dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/black"
+                    android:drawableTint="@color/black"
+                    android:padding="@dimen/_10sdp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:background="@drawable/roundandround"
+                    android:drawableLeft="@drawable/calendar2"
+                    android:drawablePadding="16sp"
+                    android:textColorHint="@color/black"
+                    android:hint="Enter preferred date"
+                    android:textSize="@dimen/_15sdp" />
+
+
+                <TextView
+                    android:id="@+id/et_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawableTint="@color/black"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:background="@drawable/roundandround"
+                    android:drawableLeft="@drawable/time"
+                    android:drawablePadding="16sp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:textColorHint="@color/black"
+                    android:padding="@dimen/_10sdp"
+                    android:hint="Enter preferred time" />
+
+
+
+                <EditText
+                    android:id="@+id/et_addInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:drawableLeft="@drawable/ic_booking"
+                    android:background="@drawable/roundandround"
+                    android:drawablePadding="8dp"
+
+                    android:hint="Notes"
+                    android:textSize="@dimen/_15sdp"
+
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:padding="12dp" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_blue"
+                    android:text="Submit"
+                    app:backgroundTint="@color/orange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_addInfo" />
+            </LinearLayout>
+
+
+
+
+
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

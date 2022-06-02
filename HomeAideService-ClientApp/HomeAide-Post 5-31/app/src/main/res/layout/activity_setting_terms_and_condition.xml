@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Setting_Terms_and_Condition">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:backgroundTint="@color/black"
+            android:id="@+id/backBtn"
+            android:layout_margin="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:fontFamily="@font/simple_beauty"
+            android:paddingTop="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Terms and condition"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1. Introduction "
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="These Terms of Service govern your use of our website located at HaomeAide Serive Application (together or individually “Service”) operated by HomeAide Service. "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+
+                android:text="Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages. "
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+
+                android:text="Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood Agreements, and agree to be bound of them."
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+
+                android:text="If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at homeaideservice@gmail.com so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service. "
+                android:paddingBottom="30dp" />
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2. Communications "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="30dp"
+                android:textColor="@color/black"
+
+                android:text="By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at homeaideservice@gmail.com. " />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:text="3. Purchases "
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="If you wish to purchase any product or service made available through Service (“Purchase”), you may be asked to supply certain information relevant to your Purchase including but not limited to, your credit or debit card number, the expiration date of your card, your billing address, and your shipping information. " />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="You represent and warrant that: (i) you have the legal right to use any card(s) or other payment method(s) in connection with any Purchase; and that (ii) the information you supply to us is true, correct and complete." />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="We may employ the use of third party services for the purpose of facilitating payment and the completion of Purchases. By submitting your information, you grant us the right to provide the information to these third parties subject to our Privacy Policy." />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="We reserve the right to refuse or cancel your order at any time for reasons including but not limited to: product or service availability, errors in the description or price of the product or service, error in your order or other reasons. " />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="30dp"
+                android:textColor="@color/black"
+
+                android:text="We reserve the right to refuse or cancel your order if fraud or an unauthorized or illegal transaction is suspected." />
+
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="4. Contests, Sweepstakes and Promotions "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+
+                android:text="Any contests, sweepstakes or other promotions (collectively, “Promotions”) made available through Service may be governed by rules that are separate from these Terms of Service. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms of Service, Promotion rules will apply."
+                android:paddingBottom="30dp"/>
+
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="5. Refunds "
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="We issue refunds for Contracts within 30 days of the original purchase of the Contract."
+                android:textColor="@color/black"
+                android:paddingBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:text="6. Content "
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material (“Content”). You are responsible for Content that you post on or through Service, including its legality, reliability, and appropriateness.
+
+ "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="By posting Content on or through Service, You represent and warrant that: (i) Content is yours (you own it) and/or you have the right to use it and the right to grant us the rights and license as provided in these Terms, and (ii) that the posting of your Content on or through Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person or entity. We reserve the right to terminate the account of anyone found to be infringing on a copyright.
+
+ "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="You retain any and all of your rights to any Content you submit, post or display on or through Service and you are responsible for protecting those rights. We take no responsibility and assume no liability for Content you or any third party posts on or through Service. However, by posting Content using Service you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through Service. You agree that this license includes the right for us to make your Content available to other users of Service, who may also use your Content subject to these Terms.
+
+ "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="HomeAide Service has the right but not the obligation to monitor and edit all Content provided by users.
+
+ "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+
+                android:text="In addition, Content found on or through this Service are the property of HomeAide Service or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
+
+ "
+                />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingBottom="10dp"
+                android:layout_height="match_parent"
+                android:text="7. Prohibited Uses "
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="8. Analytics "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="9. No Use By Minors "
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:paddingBottom="10dp"
+
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="10. Accounts "
+                android:textStyle="bold"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="11. Intellectual Property "
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="12. Copyright Policy "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="13. DMCA Notice and Procedure for Copyright Infringement Claims "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="14. Error Reporting and Feedback"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="15. Links To Other Web Sites "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:text="16. Disclaimer Of Warranty "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:text="17. Limitation Of Liability "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="18. Termination "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="18. Termination "
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="19. Governing Law "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="20. Changes To Service "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="21. Amendments To Terms "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="22. Waiver And Severability "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="23. Acknowledgement "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="24. Contact Us "
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="30dp"
+                android:textColor="@color/black"
+
+                android:text="Please send your feedback, comments, requests for technical support by email: homeaideservice@gmail.com. " />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:orientation="vertical"
+        android:paddingRight="8dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/back_arrow"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:gravity=""
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:text="Setting"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_28sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_userPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:src="@color/lighter_light_blue" />
+
+                    <TextView
+                        android:id="@+id/tv_bannerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/simple_beauty"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:text="My Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_25sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_editProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawablePadding="16dp"
+                        android:fontFamily="@font/simple_beauty"
+                        android:gravity="right"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="12sp"
+                        android:text="Edit Profile"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/termsandconditionss"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_50sdp"
+
+                    android:drawableLeft="@drawable/ic_booking"
+                    android:drawableTint="@color/background"
+                    android:text="Terms and Conditions"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:textSize="@dimen/_10sdp"
+                    />
+                <Button
+                    android:id="@+id/Nickname"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:drawableLeft="@drawable/person"
+                    android:drawableTint="@color/background"
+                    android:text="Change Nickname"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+                <Button
+                    android:id="@+id/tv_contactUs"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:drawableLeft="@drawable/contact_us"
+
+
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/background"
+                    android:gravity="center"
+                    android:text="Contact Us"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/simple_beauty"
+                    android:textSize="@dimen/_10sdp"  />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_privacyPolicy" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tv_aboutUs"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:drawableLeft="@drawable/about_us"
+                android:drawableTint="@color/background"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="About Us"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_10sdp"  />
+
+            <Button
+                android:id="@+id/tv_privacyPolicy"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:drawableLeft="@drawable/privacy_and_policy"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/background"
+                android:gravity="center"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_10sdp"  />
+
+        </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@android:color/darker_gray"
+                android:paddingLeft="@dimen/_5sdp" />
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/tv_logout"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/logout"
+                android:drawablePadding="16dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Log Out"
+                android:textColor="@color/black"
+                android:drawableTint="@color/background"
+                android:fontFamily="@font/simple_beauty"
+                android:textSize="@dimen/_10sdp"  />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_privacyPolicy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/simple_beauty"
+                android:paddingTop="@dimen/_5sdp"
+
+                android:text="By Logging in, you agree to the Terms and Condition that the Homeaide give."
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:textStyle="italic">
+
+
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp"
+        app:itemBackground="@color/orange"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

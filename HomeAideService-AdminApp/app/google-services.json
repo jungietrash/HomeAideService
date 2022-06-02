@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1094869769279",
+    "firebase_url": "https://homeaide-post-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "homeaide-post",
+    "storage_bucket": "homeaide-post.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094869769279:android:187e7416b8f9f296b1ac8a",
+        "android_client_info": {
+          "package_name": "com.codingstuff.instag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094869769279-2r03r50t1rn9kcq3e5johgls1bh7s4g6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTBASeyOTpuY3wSz3yNt2g_akm4yOkGhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094869769279-2r03r50t1rn9kcq3e5johgls1bh7s4g6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

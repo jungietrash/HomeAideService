@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="Maps.AddPlacesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Technicians"
+       android:textSize="20dp"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:textColor="#1580B1"
+     />
+
+
+    <EditText
+        android:id="@+id/edStreettxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/homeaidecolor"
+        android:hint="Please enter Street/City Address"
+        android:padding="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter First Name"
+        android:id="@+id/fNametxt"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:background="@color/homeaidecolor"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter Last Name"
+        android:id="@+id/lNametxt"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:background="@color/homeaidecolor"
+        />
+ <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter Phone number"
+        android:id="@+id/phNumbertxt"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:background="@color/homeaidecolor"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter User Type"
+        android:id="@+id/userTypetxt"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:background="@color/homeaidecolor"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Select Image"
+        android:textSize="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgPlace"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        />
+</LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Save Location to FIrebase"
+        />
+
+</LinearLayout>

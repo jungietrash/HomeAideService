@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#F67D48</color>
+    <color name="dark_blue">#152C4E</color>
+    <color name="skybluebackground">#3E7CD6</color>
+    <color name="homeaidecolor">#FEC05A</color>
+    <color name="grey_500">#BAD5D8</color>
+    <color name="pink">#ff5ccb</color>
+    <color name="blue">#00f0ff</color>
+    <color name="BackgroundColor">#FFA567</color>
+    <color name="TextHeading">#FE7903</color>
+    <color name="TextHeading2">#3B7AF8</color>
+    <color name="background">#FFF1D7</color>
+    <color name="detail">#8D8D8D</color>
+    <color name="light_blue">#2196F3</color>
+    <color name="lighter_light_blue">#4FA6EC</color>
+    <color name="primary">#1C2E46</color>
+    <color name="primary_dark">#142232</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="input_background">#ECECEC</color>
+    <color name="icon_background">#20FFFFFF</color>
+    <color name="error">#B00020</color>
+    <color name="received_message_background">#090D16</color>
+    <color name="bg_color">#F68282</color>
+    <color name="red">#F10000</color>
+    <color name="red_delete_btn">#F10000</color>
+    <color name="gray">#EF9F9F</color>
+
+</resources>

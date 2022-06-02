@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".HomeActivityForAdmin">
+
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/HomeAideService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/simple_beauty"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:text="HomeAide Service"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/simple_beauty"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="Admin Application"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_25sdp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView4"
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/chat"
+                            android:background="@drawable/roundandround"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_30sdp"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_gravity="center"
+                                app:backgroundTint="@color/red"
+                                android:scaleX="-1"
+                                app:tint="@color/orange"
+
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:src="@drawable/adminchat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/simple_beauty"
+                                android:gravity="center"
+                                android:text="Chat"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/light_blue" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/social"
+                            android:background="@drawable/roundandround"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_gravity="center"
+                                android:scaleX="-1"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:src="@drawable/transparentlogo" />
+
+                            <TextView
+                                android:id="@+id/RatingActivity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/simple_beauty"
+                                android:gravity="center"
+                                android:text="Social"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/light_blue" />
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/viewBooking"
+                            android:background="@drawable/roundandround"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_30sdp"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_gravity="center"
+                                android:scaleX="-1"
+                                app:tint="@color/orange"
+
+                                android:src="@drawable/ic_booking" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/simple_beauty"
+                                android:gravity="center"
+                                android:text="View Booking"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/activeBooking"
+                            android:background="@drawable/roundandround"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/_5sdp"
+
+                                app:tint="@color/orange"
+
+                                android:src="@drawable/activebooking" />
+
+                            <TextView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/simple_beauty"
+                                android:gravity="center"
+                                android:text="Active Booking"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/search"
+                            android:background="@drawable/roundandround"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_10sdp"
+
+                            android:layout_marginRight="@dimen/_30sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_gravity="center"
+                                android:scaleX="-1"
+                                app:tint="@color/orange"
+
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:src="@drawable/adminsearch" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/simple_beauty"
+                                android:gravity="center"
+                                android:text="Search Service"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/light_blue" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/addService"
+                            android:background="@drawable/roundandround"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:src="@drawable/adminaddservice"
+                                app:tint="@color/orange"
+
+                                android:layout_marginBottom="@dimen/_5sdp"
+
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/simple_beauty"
+                                android:gravity="center"
+                                android:text="Add Service"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+
+
+
+
+                        <LinearLayout
+                            android:background="@drawable/roundandround"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/setting"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:scaleX="-1"
+                                app:tint="@color/orange"
+                                android:src="@drawable/adminsetting"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/simple_beauty"
+                                android:gravity="center"
+                                android:text="Setting"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/light_blue"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

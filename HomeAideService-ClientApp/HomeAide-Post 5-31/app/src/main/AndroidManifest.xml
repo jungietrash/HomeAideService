@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.homeaide.post">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="HomeAide"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:label">
+        <activity
+            android:name=".Privacy"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".AddPostActivity" />
+        <activity android:name=".SetUpActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".RatingActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".User_Electrical"
+            android:exported="false" />
+        <activity
+            android:name=".User_Cleaning"
+            android:exported="true" />
+        <activity
+            android:name=".Setting_Terms_and_Condition"
+            android:exported="true" />
+        <activity
+            android:name=".OnBoardingActivity"
+            android:exported="true"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true" />
+        <activity
+            android:name=".booking.BookingMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".booking.ShowAllActivity"
+            android:exported="false" />
+        <activity
+            android:name=".booking.BookingLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".booking.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SMSMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".chat.UsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.ChatSignUpActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".chat.ChatMainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".firebase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDTBASeyOTpuY3wSz3yNt2g_akm4yOkGhU" />
+
+        <activity
+            android:name=".bookingv2.MyServices"
+            android:exported="true" />
+        <activity
+            android:name=".bookingv2.ServicesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".bookingv3.booking.client_order_details"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.client_booking_details"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.address_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.change_password_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.view_in_map"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.history_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.my_orders_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.checkout_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.favorite_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.my_booking_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.booking_summary_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.seller_application_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.tech_application_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.order_details_page"
+            android:exported="false" />
+        <activity
+            android:name=".bookingv3.booking.add_listing_page"
+            android:exported="true" />
+        <activity android:name=".bookingv3.booking.edit_listing_page" />
+        <activity android:name=".bookingv3.booking.seller_dashboard" />
+        <activity
+            android:name=".bookingv3.booking.add_project_page"
+            android:exported="true" />
+        <activity android:name=".bookingv3.booking.edit_project_page" />
+        <activity android:name=".bookingv3.booking.switch_account_page" />
+        <activity android:name=".bookingv3.booking.edit_profile_page" />
+        <activity android:name=".bookingv3.booking.place_order_page" />
+        <activity android:name=".bookingv3.booking.marketplace_page" />
+        <activity android:name=".bookingv3.booking.booking_application_page" />
+        <activity android:name=".bookingv3.booking.booking_page" />
+        <activity android:name=".bookingv3.booking.Handyman_Service_Page" />
+        <activity
+            android:name=".bookingv3.booking.more_page"
+            android:exported="true" />
+        <activity android:name=".bookingv3.booking.notification_page" />
+        <activity android:name=".bookingv3.booking.message_page" />
+        <activity android:name=".bookingv3.booking.cart_page" />
+        <activity android:name=".bookingv3.booking.search_page" />
+        <activity android:name=".bookingv3.booking.homepage" />
+        <activity android:name=".bookingv3.booking.sign_up_page" />
+        <activity
+            android:name=".bookingv3.booking.login_page"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Maps.userLatitudeLongitude"
+            android:exported="true" />
+    </application>
+
+</manifest>

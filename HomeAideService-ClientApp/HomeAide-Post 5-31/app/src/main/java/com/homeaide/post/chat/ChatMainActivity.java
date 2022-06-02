@@ -1,0 +1,201 @@
+package com.homeaide.post.chat;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.util.Base64;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.homeaide.post.Adapter.RecentConversationAdapter;
+import com.homeaide.post.R;
+import com.homeaide.post.RatingActivity;
+import com.homeaide.post.bookingv3.booking.homepage;
+import com.homeaide.post.bookingv3.booking.more_page;
+import com.homeaide.post.bookingv3.booking.my_booking_page;
+import com.homeaide.post.databinding.ActivityChatMainBinding;
+import com.homeaide.post.listeners.ConversionListener;
+import com.homeaide.post.Model.ChatMessage;
+import com.homeaide.post.Model.User;
+import com.homeaide.post.utilities.Constants;
+import com.homeaide.post.utilities.PreferenceManager;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+public class ChatMainActivity extends BaseActivity implements ConversionListener {
+
+    BottomNavigationView bottomNavigationView;
+
+
+    private ActivityChatMainBinding binding;
+    private PreferenceManager preferenceManager;
+    private List<ChatMessage> conversation;
+    private RecentConversationAdapter conversationAdapter;
+    private FirebaseFirestore database;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityChatMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        preferenceManager = new PreferenceManager(getApplicationContext());
+        loadUserDetails();
+        getToken();
+        init();
+        setListener();
+        listenConversations();
+
+        bottomNavigationView = findViewById(R.id.bottom_navigator);
+        bottomNavigationView.setSelectedItemId(R.id.navigation_chat);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.navigation_chat:
+
+                    case R.id.navigation_booking:
+                        startActivity(new Intent(getApplicationContext(), my_booking_page.class));
+                        overridePendingTransition(5,5);
+                        return true;
+
+
+                    case R.id.navigation_setting:
+                        startActivity(new Intent(getApplicationContext(), more_page.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+
+                    case R.id.navigation_home:
+                        startActivity(new Intent(getApplicationContext(), homepage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+
+                    case R.id.navigation_rating:
+                        startActivity(new Intent(getApplicationContext(), RatingActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+        });
+    }
+
+    private void init(){
+        conversation = new ArrayList<>();
+        conversationAdapter = new RecentConversationAdapter(conversation,this);
+        binding.conversationRecyclerView.setAdapter(conversationAdapter);
+        database = FirebaseFirestore.getInstance();
+    }
+
+    private void setListener() {
+        binding.fabNewChat.setOnClickListener(view ->
+                startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
+    }
+    private void getToken() {
+        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(this::updateToken);
+    }
+
+    private void loadUserDetails(){
+        binding.TextFirstName.setText(preferenceManager.getString(Constants.KEY_FIRST_NAME));
+        binding.TextLastName.setText(preferenceManager.getString(Constants.KEY_LAST_NAME));
+        byte[] bytes = Base64.decode(preferenceManager.getString(Constants.KEY_IMAGE), android.util.Base64.DEFAULT);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        binding.imageProfile.setImageBitmap(bitmap);
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void listenConversations(){
+        database.collection(Constants.KEY_COLLECTION_CONVERSATION)
+                .whereEqualTo(Constants.KEY_SENDER_ID,preferenceManager.getString(Constants.KEY_USER_ID))
+                .addSnapshotListener(eventListener);
+        database.collection(Constants.KEY_COLLECTION_CONVERSATION)
+                .whereEqualTo(Constants.KEY_RECEIVER_ID,preferenceManager.getString(Constants.KEY_USER_ID))
+                .addSnapshotListener(eventListener);
+    }
+
+    private final EventListener<QuerySnapshot> eventListener = (value, error) ->{
+        if (error != null){
+            return;
+        }
+        if (value != null){
+            for (DocumentChange documentChange : value.getDocumentChanges()){
+                if (documentChange.getType() == DocumentChange.Type.ADDED){
+                    String senderId = documentChange.getDocument().getString(Constants.KEY_SENDER_ID);
+                    String receiverId = documentChange.getDocument().getString(Constants.KEY_RECEIVER_ID);
+                    ChatMessage chatMessage = new ChatMessage();
+                    chatMessage.senderId = senderId;
+                    chatMessage.receiverId = receiverId;
+
+                    if (preferenceManager.getString(Constants.KEY_USER_ID).equals(senderId)){
+                        chatMessage.conversionImage = documentChange.getDocument().getString(Constants.KEY_RECEIVER_IMAGE);
+                        chatMessage.conversionName = documentChange.getDocument().getString(Constants.KEY_RECEIVER_NAME);
+                        chatMessage.conversionId = documentChange.getDocument().getString(Constants.KEY_RECEIVER_ID);
+                    }else {
+                        chatMessage.conversionImage = documentChange.getDocument().getString(Constants.KEY_SENDER_IMAGE);
+                        chatMessage.conversionName = documentChange.getDocument().getString(Constants.KEY_SENDER_NAME);
+                        chatMessage.conversionId = documentChange.getDocument().getString(Constants.KEY_SENDER_ID);
+                    }
+                    chatMessage.message = documentChange.getDocument().getString(Constants.KEY_LAST_MESSAGE);
+                    chatMessage.dateObject = documentChange.getDocument().getDate(Constants.KEY_TIMESTAMP);
+                    conversation.add(chatMessage);
+                } else if (documentChange.getType() == DocumentChange.Type.MODIFIED){
+                    for (int i = 0; i < conversation.size(); i++){
+                        String senderId = documentChange.getDocument().getString(Constants.KEY_SENDER_ID);
+                        String receiverId = documentChange.getDocument().getString(Constants.KEY_RECEIVER_ID);
+                        if (conversation.get(i).senderId.equals(senderId) && conversation.get(i).receiverId.equals(receiverId)){
+                            conversation.get(i).message = documentChange.getDocument().getString(Constants.KEY_LAST_MESSAGE);
+                            conversation.get(i).dateObject = documentChange.getDocument().getDate(Constants.KEY_TIMESTAMP);
+                            break;
+                        }
+                    }
+                }
+            }
+            Collections.sort(conversation,(obj1, obj2) -> obj2.dateObject.compareTo(obj1.dateObject));
+            conversationAdapter.notifyDataSetChanged();
+            binding.conversationRecyclerView.smoothScrollToPosition(0);
+            binding.conversationRecyclerView.setVisibility(View.VISIBLE);
+            binding.progressBar.setVisibility(View.GONE);
+        }
+    };
+
+
+    private void updateToken(String token){
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+        DocumentReference documentReference =
+                database.collection(Constants.KEY_COLLECTION_USERS).document(preferenceManager.getString(Constants.KEY_USER_ID));
+
+        documentReference.update(Constants.KEY_FCM_TOKEN,token)
+
+                .addOnFailureListener(e -> showToast("Unable to update token"));
+    }
+
+
+    @Override
+    public void onConversionClicked(User user) {
+        Intent intent = new Intent(getApplicationContext(),ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER,user);
+        startActivity(intent);
+    }
+}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/p"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:fontFamily="casual"
+                android:drawablePadding="10dp"
+                android:text="Profile"/>
+
+            <TextView
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawablePadding="10dp"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:fontFamily="casual"
+                android:drawableLeft="@drawable/bank"
+                android:text="Manage Bank Account"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawablePadding="10dp"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:fontFamily="casual"
+                android:drawableLeft="@drawable/location"
+                android:textColor="@color/black"
+
+                android:text="Location"/>
+
+            <TextView
+                android:id="@+id/aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawablePadding="10dp"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:fontFamily="casual"
+                android:textColor="@color/black"
+
+                android:drawableLeft="@drawable/aboutus"
+                android:text="About us"/>
+
+            <TextView
+                android:id="@+id/termsandconditionss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawablePadding="10dp"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:fontFamily="casual"
+                android:textColor="@color/black"
+
+                android:drawableLeft="@drawable/termsandcondition"
+                android:text="Terms and Condition"/>
+
+            <TextView
+                android:id="@+id/changeCredentials"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawablePadding="10dp"
+                android:textSize="20dp"
+                android:textStyle="italic"
+
+                android:fontFamily="casual"
+                android:drawableLeft="@drawable/logout"
+                android:textColor="@color/black"
+                android:text="Change Settings"/>
+
+            <TextView
+                android:id="@+id/signout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawablePadding="10dp"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:fontFamily="casual"
+                android:drawableLeft="@drawable/logout"
+                android:textColor="@color/black"
+
+                android:text="Logout"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:fontFamily="casual"
+                android:textColor="@color/black"
+                android:text="By Logging in, you agree to the Terms and Condition that the Homeaide give.">
+
+
+            </TextView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

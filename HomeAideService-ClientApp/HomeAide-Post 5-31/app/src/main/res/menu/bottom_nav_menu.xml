@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/chat"
+        android:title="@string/title_chat" />
+
+    <item
+        android:id="@+id/navigation_booking"
+        android:icon="@drawable/booking"
+        android:title="@string/title_booking" />
+    <item
+        android:id="@+id/navigation_rating"
+        android:icon="@drawable/ic_baseline_star_rate_24"
+        android:title="Rating" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/setting"
+        android:title="@string/title_setting" />
+
+
+
+</menu>

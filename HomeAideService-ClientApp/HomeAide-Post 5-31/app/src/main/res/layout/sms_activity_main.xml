@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:backgroundTint="@color/black"
+            android:id="@+id/backBtn"
+            android:layout_margin="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:fontFamily="@font/simple_beauty"
+            android:paddingTop="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send a message for inquiries!"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/simple_beauty"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textSize="@dimen/_15sdp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_phone"
+        android:hint="Enter phone number"
+        android:padding="12dp"
+        android:text="09183426800"
+        android:background="@drawable/roundandround"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:maxLength="11"
+        android:inputType="phone"/>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_message"
+        android:hint="Enter message"
+        android:padding="@dimen/_15sdp"
+        android:fontFamily="@font/simple_beauty"
+        android:background="@drawable/roundandround"
+        android:minLines="6"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_send"
+        android:text="Send Message"
+        android:background="@drawable/roundandround"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:text="HomeAide - 09183426800"
+        android:fontFamily="@font/simple_beauty"
+        android:gravity="center"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trans"/>
+
+
+
+</LinearLayout>
+

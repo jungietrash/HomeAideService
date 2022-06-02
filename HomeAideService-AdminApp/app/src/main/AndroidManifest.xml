@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.homeaide.post">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="HomeAide"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:label">
+        <activity
+            android:name=".notification_page"
+            android:exported="false" />
+        <activity
+            android:name=".SetUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".active_booking"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivityForAdmin"
+            android:exported="true" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".AddPostActivity" />
+        <activity android:name=".RatingActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true" />
+        <activity
+            android:name=".booking.BookingMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".booking.ShowAllActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SMSMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".chat.UsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.ChatMainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".firebase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDTBASeyOTpuY3wSz3yNt2g_akm4yOkGhU" />
+
+        <activity
+            android:name=".Booking.booking.Change_Password"
+            android:exported="false" />
+        <activity
+            android:name=".Booking.booking.Booking_Service_Details"
+            android:exported="false" />
+        <activity
+            android:name=".Booking.booking.Booking_Add_Service"
+            android:exported="true" />
+        <activity android:name=".Booking.booking.Booking_Edit_Service" />
+        <activity android:name=".Booking.booking.Booking_Projects" />
+        <activity android:name=".Booking.booking.Admin_Profile_Page" />
+        <activity
+            android:name=".Booking.booking.Admin_Setting"
+            android:exported="true" />
+        <activity android:name=".Booking.booking.Admin_Search_Page" />
+        <activity android:name=".Booking.booking.register_page" />
+        <activity
+            android:name=".Booking.booking.sign_in"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
