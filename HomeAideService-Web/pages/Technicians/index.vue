@@ -18,12 +18,7 @@
               <v-container>
                 <v-form v-model="valid">
 
-                
-                 <v-btn-toggle>
-                      <v-btn v-model="editedItem.approved">
-                        <v-icon>mdi-alpha-t-box</v-icon>
-                      </v-btn>
-              </v-btn-toggle>       
+          
 
                   <v-row>
                     <v-text-field
@@ -41,11 +36,7 @@
                     ></v-text-field>
                   </v-row>
 
-                <v-btn-toggle>
-                      <v-btn v-model="editedItem.pending">
-                        <v-icon>mdi-alpha-t-box</v-icon>
-                      </v-btn>
-                </v-btn-toggle>
+             
                   <v-row>
                     <v-text-field
                       v-model="editedItem.phoneNumber"
@@ -110,11 +101,11 @@
         </template>
 
         <template v-slot:[`item.selfieUrl`]="{ item }">
-         <img :src="item.selfieUrl" width="25" height="25">
+         <img :src="item.selfieUrl" width="100" height="100">
         </template>
 
           <template v-slot:[`item.validIdUrl`]="{ item }">
-         <img :src="item.validIDUrl" width="25" height="25">
+         <img :src="item.validIDUrl" width="200" height="100">
         </template> 
 
         <template v-slot:[`item.actions`]="{ item }">
@@ -190,18 +181,7 @@ export default {
         sortable: false,
         value: 'phoneNumber',
       },
-      {
-        text: 'Approved?',
-        align: 'start',
-        sortable: false,
-        value: 'approved',
-      },
-      {
-        text: 'Pending?',
-        align: 'start',
-        sortable: false,
-        value: 'pending',
-      },
+      
       {
         text: 'Technician UID#',
         align: 'start',

@@ -63,6 +63,14 @@ public class favorite_page extends AppCompatActivity {
 
     private void clickListeners() {
 
+        tv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(favorite_page.this, homepage.class);
+                startActivity(intent);
+            }
+        });
+
         favoriteItem.setOnItemClickListener(new AdapterFavoriteItem.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {

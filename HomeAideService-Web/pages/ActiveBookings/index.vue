@@ -4,6 +4,100 @@
       <v-card-title>
        Active Bookings
         <v-spacer></v-spacer>
+
+       <v-dialog v-model="dialog" max-width="500px">
+          <template v-slot:activator="{ on }">
+            <v-btn color="wizniche-blue" dark class="mb-2" v-on="on">Add New Service Booking</v-btn>
+          </template>
+          <v-card>
+            <v-card-title>
+              <span class="headline">{{ formTitle }}</span>
+            </v-card-title>
+
+            <v-card-text>
+              <v-container>
+                <v-form v-model="valid">
+                  <v-row>
+                    <v-text-field
+                      v-model="editedItem.imageUrl"
+                      label="imageUrl"
+                      :rules="[required('imageUrl')]"
+                    ></v-text-field>
+                  </v-row>
+                  <v-row>
+                    <v-text-field
+                      v-model="editedItem.bookingTime"
+                      label="Booking Time"
+                      :rules="[required('Booking Time')]"
+                    ></v-text-field>
+                  </v-row>
+            
+                  <v-row>
+                    <v-text-field
+                      v-model="editedItem.bookingDate"
+                      label="Booking Date"
+                      :rules="[required('Booking Date')]"
+                    ></v-text-field>
+                  </v-row>
+                  <v-row>
+                    <v-text-field
+                      v-model="editedItem.bookingCreated"
+                      label="Booking Created"
+                      :rules="[required('Booking Created')]"
+                    ></v-text-field>
+                  </v-row>
+                 <v-row>
+                    <v-text-field
+                      v-model="editedItem.custAddress"
+                      label="Customer Address"
+                      :rules="[required('Customer Address')]"
+                    ></v-text-field>
+                  </v-row>
+                    <v-row>
+                    <v-text-field
+                      v-model="editedItem.custContactNum"
+                      label="Customer Phone#"
+                      :rules="[required('CCustomer Phone#')]"
+                    ></v-text-field>
+                  </v-row>
+                   <v-row>
+                    <v-text-field
+                      v-model="editedItem.paymentMethod"
+                      label="Payment Method"
+                      :rules="[required('Payment Method')]"
+                    ></v-text-field>
+                  </v-row>
+                    <v-row>
+                    <v-text-field
+                      v-model="editedItem.projName"
+                      label="Service Name"
+                      :rules="[required('Service Name')]"
+                    ></v-text-field>
+                  </v-row>
+                    <v-row>
+                    <v-text-field
+                      v-model="editedItem.totalPrice"
+                      label="Price"
+                      :rules="[required('Price')]"
+                    ></v-text-field>
+                  </v-row>
+
+
+
+
+                </v-form>
+              </v-container>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
+              <v-btn color="blue darken-1" text @click="save" :disabled="!valid">Save</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+
+        
       </v-card-title>
 
       <v-data-table
@@ -28,7 +122,7 @@
         </template>
         
           <template v-slot:[`item.imageUrl`]="{ item }">
-         <img :src="item.imageUrl" width="25" height="25">
+         <img :src="item.imageUrl" width="100" height="100">
         </template>
 
         <template v-slot:[`item.actions`]="{ item }">
@@ -127,13 +221,6 @@ export default {
         sortable: false,
         value: 'totalPrice',
       },  
-
-
-
-
-
-
-
 
 
 

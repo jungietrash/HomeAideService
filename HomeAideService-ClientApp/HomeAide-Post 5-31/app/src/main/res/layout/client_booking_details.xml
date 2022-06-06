@@ -107,6 +107,7 @@
                     app:tint="@color/orange" />
 
                 <TextView
+                    android:id="@+id/chatUs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
@@ -134,6 +135,7 @@
                     app:tint="@color/orange" />
 
                 <TextView
+                    android:id="@+id/messageUs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"

@@ -158,7 +158,7 @@
         </template>
 
         <template v-slot:[`item.imageUrl`]="{ item }">
-         <img :src="item.imageUrl" width="25" height="25">
+         <img :src="item.imageUrl" width="100" height="100">
         </template>
         
         <template v-slot:[`item.actions`]="{ item }">

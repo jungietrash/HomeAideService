@@ -146,7 +146,6 @@ public class booking_page extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 new SweetAlertDialog(booking_page.this, SweetAlertDialog.SUCCESS_TYPE)
                                         .setTitleText("Subscribed")
-                                        .setCancelText("Okay")
                                         .show();
 
 

@@ -8,6 +8,19 @@
     android:background="@color/background"
     android:gravity="center"
     tools:context=".Maps.userLatitudeLongitude">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:gravity="center"
+        android:fontFamily="@font/simple_beauty"
+        android:textSize="@dimen/_15sdp"
+        android:hint="You're from"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+     />
 
     <TextView
         android:id="@+id/show_location"
@@ -16,10 +29,12 @@
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/_20sdp"
         android:gravity="center"
+        android:fontFamily="@font/simple_beauty"
+        android:textSize="@dimen/_15sdp"
         android:hint="Location"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+      />
 
     <Button
         android:layout_width="match_parent"

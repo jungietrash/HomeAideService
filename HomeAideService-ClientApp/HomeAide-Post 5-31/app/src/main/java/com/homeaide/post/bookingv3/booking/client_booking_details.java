@@ -25,6 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
+import com.homeaide.post.SMSMainActivity;
+import com.homeaide.post.chat.ChatMainActivity;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -41,7 +43,7 @@ public class client_booking_details extends AppCompatActivity {
     private ImageView iv_messageCustomer, iv_custPhoto;
     private TextView tv_addressSummary,tv_propertyTypeSummary,tv_brandSummary,tv_acTypeSummary,tv_unitTypeSummary,tv_prefDateSummary,
             tv_prefTimeSummary,tv_contactNumSummary, tv_back, tv_customerName, tv_bookingName, tv_deleteBtn, tv_paymentMethod,
-            tv_time, tv_bookingDesc, tv_month, tv_date, tv_day, tv_techContactNumSummary, tv_custAddressSummary, tv_bookPriceSummary;
+            tv_time, tv_bookingDesc, tv_month, tv_date, tv_day, tv_techContactNumSummary, tv_custAddressSummary, tv_bookPriceSummary, chatus, messageus;
     private Button btn_completeBooking;
 
     String imageUrl, custID, bookingIdFromIntent, latString, longString, bookingName;
@@ -86,6 +88,23 @@ public class client_booking_details extends AppCompatActivity {
             public void onClick(View view) {
 
                 cancelBooking();
+            }
+        });
+
+        chatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(client_booking_details.this, ChatMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        messageus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(client_booking_details.this, SMSMainActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -304,7 +323,8 @@ public class client_booking_details extends AppCompatActivity {
         iv_custPhoto = findViewById(R.id.iv_custPhoto);
         tv_paymentMethod = findViewById(R.id.tv_paymentMethod);
         tv_bookPriceSummary = findViewById(R.id.tv_bookPriceSummary);
-
+        chatus = findViewById(R.id.chatUs);
+        messageus = findViewById(R.id.messageUs);
         tv_deleteBtn = findViewById(R.id.tv_deleteBtn);
         tv_month = findViewById(R.id.tv_month);
         tv_date = findViewById(R.id.tv_date);
