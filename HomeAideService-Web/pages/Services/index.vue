@@ -140,7 +140,7 @@
 
       <v-data-table
         :headers="headers"
-        :items="evacuees"
+        :items="services"
         :search="search"
         sort-by="name"
         class="elevation-1"
@@ -269,12 +269,12 @@ export default {
     ],
     editedIndex: -1,
     editedItem: {
-      evacuationName: '',
+      serviceName: '',
       firstName: '',
       lastName: ''
     },
     defaultItem: {
-      evacuationName: '',
+      serviceName: '',
       firstName: '',
       lastName: ''
     },
@@ -282,12 +282,12 @@ export default {
   }),
   async fetch({ store }) {
     try {
-      await store.dispatch('evacuee/loadAllEvacuees');
+      await store.dispatch('service/loadAllServices');
     } catch (e) { }
   },
   computed: {
     ...mapState({
-      evacuees: state => state.evacuee.evacuees
+      services: state => state.service.services
     }),
     formTitle () {
       return this.editedIndex === -1 ? 'New Services' : 'Edit Services  '
@@ -302,13 +302,13 @@ export default {
   },
   methods: {
     editItem (item) {
-      this.editedIndex = this.evacuees.indexOf(item)
+      this.editedIndex = this.services.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialog = true
     },
     async deleteItem (item) {
       try {
-        confirm('Are you sure you want to delete this item?') && await this.$store.dispatch('evacuee/delete', item);
+        confirm('Are you sure you want to delete this item?') && await this.$store.dispatch('service/delete', item);
       } catch (e) { }
     },
     close () {
@@ -321,9 +321,9 @@ export default {
     async save () {
       try {
         if (this.editedIndex > -1) {
-          await this.$store.dispatch('evacuee/edit', this.editedItem);
+          await this.$store.dispatch('service/edit', this.editedItem);
         } else {
-          await this.$store.dispatch('evacuee/create', this.editedItem);
+          await this.$store.dispatch('service/create', this.editedItem);
         }
       } catch (e) { }
       this.close()

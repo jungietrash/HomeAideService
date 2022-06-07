@@ -102,7 +102,7 @@
 
       <v-data-table
         :headers="headers"
-        :items="evacuations"  
+        :items="bookings"  
         :search="search"
         sort-by="name"
         class="elevation-1"
@@ -222,40 +222,36 @@ export default {
         value: 'totalPrice',
       },  
 
-
-
-
-      
       { text: 'Actions', value: 'actions', sortable: false, width: '150' },
     ],
     editedIndex: -1,
     editedItem: {
-      evacuationName: '',
-      country: '',
-      evacuationBarangay: ''
+      bookingName: '',
+      custAddress: '',
+      bookingCreated: ''
     },
     defaultItem: {
-      evacuationName: '',
-      country: '',
-      evacuationBarangay: ''
+      bookingName: '',
+      custAddress: '',
+      bookingCreated: ''
     },
     ...validations
   }),
   async fetch({ store }) {
     try {
-      await store.dispatch('evacuation/loadAllEvacuations');
+      await store.dispatch('booking/loadAllBookings');
     } catch (e) { }
   },
   computed: {
     ...mapState({
-      evacuations: state => state.evacuation.evacuations
+      bookings: state => state.booking.bookings
     }),
     formTitle () {
-      return this.editedIndex === -1 ? 'New Evacuation' : 'Edit Evacuation'
+      return this.editedIndex === -1 ? 'New Booking' : 'Edit Booking'
     },
-    // evacuations () {
+    // bookings () {
     //   return {
-    //     evacuations: this.$store.state.evacuation.evacuations
+    //     bookings: this.$store.state.booking.bookings
     //   }
     // }
   },
@@ -268,13 +264,13 @@ export default {
   },
   methods: {
     editItem (item) {
-      this.editedIndex = this.evacuations.indexOf(item)
+      this.editedIndex = this.bookings.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialog = true
     },
     async deleteItem (item) {
       try {
-        confirm('Are you sure you want to delete this item?') && await this.$store.dispatch('evacuation/delete', item);
+        confirm('Are you sure you want to delete this item?') && await this.$store.dispatch('booking/delete', item);
       } catch (e) { }
     },
     close () {
@@ -287,9 +283,9 @@ export default {
     async save () {
       try {
         if (this.editedIndex > -1) {
-          await this.$store.dispatch('evacuation/edit', this.editedItem);
+          await this.$store.dispatch('booking/edit', this.editedItem);
         } else {
-          await this.$store.dispatch('evacuation/create', this.editedItem);
+          await this.$store.dispatch('booking/create', this.editedItem);
         }
       } catch (e) { }
       this.close()

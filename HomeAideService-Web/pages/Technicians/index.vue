@@ -83,7 +83,7 @@
 
       <v-data-table
         :headers="headers"
-        :items="calamities"
+        :items="technicians"
         :search="search"
         sort-by="name"
         class="elevation-1"
@@ -201,12 +201,12 @@ export default {
   }),
   async fetch({ store }) {
     try {
-      await store.dispatch('calamity/loadAllCalamities');
+      await store.dispatch('technician/loadAllTechnicians');
     } catch (e) { }
   },
   computed: {
     ...mapState({
-      calamities: state => state.calamity.calamities
+      technicians: state => state.technician.technicians
     }),
     formTitle () {
       return this.editedIndex === -1 ? 'New Technician' : 'Edit Technician'
@@ -221,13 +221,13 @@ export default {
   },
   methods: {
     editItem (item) {
-      this.editedIndex = this.calamities.indexOf(item)
+      this.editedIndex = this.technicians.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialog = true
     },
     async deleteItem (item) {
       try {
-        confirm('Are you sure you want to delete this item?') && await this.$store.dispatch('calamity/delete', item);
+        confirm('Are you sure you want to delete this item?') && await this.$store.dispatch('technician/delete', item);
       } catch (e) { }
     },
     close () {
@@ -240,9 +240,9 @@ export default {
     async save () {
       try {
         if (this.editedIndex > -1) {
-          await this.$store.dispatch('calamity/edit', this.editedItem);
+          await this.$store.dispatch('technician/edit', this.editedItem);
         } else {
-          await this.$store.dispatch('calamity/create', this.editedItem);
+          await this.$store.dispatch('technician/create', this.editedItem);
         }
       } catch (e) { }
       this.close()
